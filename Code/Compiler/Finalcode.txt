@@ -1,0 +1,93 @@
+.386                     
+.model flat, stdcall     
+option casemap : none    
+                         
+include msvcrt.inc       
+includelib msvcrt.lib    
+                         
+.data                    
+strFmt db '%s', 0
+intFmt db '%d', 0
+chaFmt db ' %c', 0
+t1 dd 10
+.code                     
+proce_3 PROC
+push ebp
+mov ebp, esp
+sub esp, 4d
+pc0:
+mov eax, 9d
+mov [ebp - 4], eax
+pc1:
+mov eax, [ebp - 4]
+mov ebx, [ebp + 24d]
+mov [ebx], eax
+pc2:
+mov esp, ebp
+pop ebp
+ret
+proce_3 ENDP
+proce_2 PROC
+push ebp
+mov ebp, esp
+sub esp, 0d
+pc3:
+mov ebx, [ebp + 20d]
+push ebx
+pc4:
+push [ebp + 16]
+pc5:
+push [ebp + 12]
+pc6:
+push ebp
+pc7:
+sub esp, 4
+pc8:
+call proce_3
+pc9:
+mov esp, ebp
+pop ebp
+ret
+proce_2 ENDP
+proce_1 PROC
+push ebp
+mov ebp, esp
+sub esp, 0d
+pc10:
+mov ebx, [ebp + 16d]
+push ebx
+pc11:
+push [ebp + 12]
+pc12:
+push ebp
+pc13:
+sub esp, 4
+pc14:
+call proce_2
+pc15:
+mov esp, ebp
+pop ebp
+ret
+proce_1 ENDP
+start:
+push ebp
+mov ebp, esp
+sub esp, 8d
+pc16:
+mov ebx, ebp
+sub ebx, 4d
+push ebx
+pc17:
+push ebp
+pc18:
+sub esp, 4
+pc19:
+call proce_1
+pc20:
+mov eax, [ebp - 4d]
+invoke crt_printf, addr intFmt, eax
+pc21:
+mov esp, ebp
+pop ebp
+ret
+end start

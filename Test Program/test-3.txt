@@ -1,0 +1,11 @@
+var i:integer;
+begin
+	read(i);
+	case i of
+		1:	i:=i+1;
+		2:	;
+		3:	i:=i+3;
+		100:	
+	end;	
+	write(i)
+end.

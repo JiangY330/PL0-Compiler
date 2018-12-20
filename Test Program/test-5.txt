@@ -1,0 +1,96 @@
+const const1=001,const2=3,const3=-3,const4=+3,const5='a';
+var
+  factorArr:array[100] of integer;
+  alphaArr:array[26] of char;
+  i,j,n,ans:integer;
+  a,b:char;
+
+function multi(n:integer):integer;
+begin
+  if n<=1 then
+            multi:=1
+          else
+            multi:=n*multi(n-1)
+end
+;
+
+function multi1(n:integer):integer;
+var ans,i:integer;
+begin
+  i:=0;
+  ans:=i+1;
+  if n>1 then
+           for i:=2 to n do
+               ans:=ans*i
+  ;
+  multi1:=ans
+end
+;
+
+function multi2:integer;
+begin
+  multi2:=multi(4)-multi1(3)
+end
+;
+
+procedure swap(var a,b:char);
+var temp:char;
+begin
+  temp:=a;
+  a:=b;
+  b:=temp
+end
+;
+
+procedure add(var i:integer;step:integer);
+begin
+  i:=i+step;
+end
+;
+
+procedure sub(var i:integer;step:integer);
+begin
+  i:=i-step;
+end
+;
+
+procedure output;
+begin
+  write("Hello World!")
+end
+;
+
+begin
+  read(a,b);
+  swap(a,b);
+  write(a);
+  write(b);
+  j:=2;
+  for i:=0 to 25 do
+    alphaArr[i]:=const5+i;
+  for i:=25 downto 0 do
+    write(alphaArr[i]);
+  output;
+  write("Please enter a number between 1 and 10.");
+  read(n);
+  if n<=10 then
+             if n>=1 then 
+                       begin
+                         factorArr[j]:=multi(n);
+                         add(j,1);
+                         factorArr[j]:=multi1(n);
+                         sub(j,2);
+                         factorArr[j]:=multi2;
+                         write("The answer is ",factorArr[3]/factorArr[1])
+                       end
+             else
+               write("Your input is less than 1")
+  else
+    write("Your input is greater than 10");
+  read(ans);
+  case ans of
+    -1:write("first input is less than second input",ans);
+    0:write("first input is equal to second input",ans);
+    1:write("first input is greater than second input",ans)
+  end
+end.

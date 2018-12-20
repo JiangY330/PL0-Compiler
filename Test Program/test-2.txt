@@ -1,0 +1,22 @@
+const z = 1;
+var m,n,i:integer;
+    a:array[8] of integer;
+
+function gcd(m,n:integer):integer;
+  begin
+    if n=0
+      then gcd:=m
+    else 
+	  begin
+	    m := m - m / n * n;
+	    gcd:=gcd(n,m)
+	  end
+end;
+begin
+ 
+  n:=3;
+  m:=15;
+  read(n,m); 
+  
+  write(gcd(m,n))
+end.

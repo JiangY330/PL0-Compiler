@@ -1,0 +1,155 @@
+.386                     
+.model flat, stdcall     
+option casemap : none    
+                         
+include msvcrt.inc       
+includelib msvcrt.lib    
+                         
+.data                    
+strFmt db '%s', 0
+intFmt db '%d', 0
+chaFmt db '%c', 0
+t1 dd 10
+str0 db " a= ", 0
+str1 db " b= ", 0
+str2 db " i= ", 0
+str3 db " i= ", 0
+.code                     
+proce_3 PROC
+push ebp
+mov ebp, esp
+sub esp, 12d
+pc18:
+mov eax, 2d
+mov [ebp - 4], eax
+pc19:
+mov eax, [ebp + 16d]
+mov ebx, [ebp - 4]
+mul ebx
+mov [ebp - 4], eax
+pc20:
+mov eax, [ebp - 4]
+mov [ebp - 8], eax
+pc21:
+mov eax, [ebp - 8]
+mov [ebp + 16d], eax
+pc22:
+mov eax, [ebp + 16d]
+mov [ebp - 12], eax
+pc23:
+mov eax, [ebp - 12]
+mov [ebp + 12d], eax
+pc24:
+mov esp, ebp
+pop ebp
+ret
+proce_3 ENDP
+proce_2 PROC
+push ebp
+mov ebp, esp
+sub esp, 16d
+pc0:
+mov eax, 200d
+mov [ebp - 8], eax
+pc1:
+mov eax, [ebp - 8]
+mov ebx, [ebp + 12d]
+mov [ebx - 4], eax
+pc2:
+mov eax, 200d
+mov [ebp - 12], eax
+pc3:
+mov eax, [ebp - 12]
+sub eax, 10d
+mov [ebp - 12], eax
+pc4:
+mov eax, [ebp - 12]
+mov [ebp - 4d], eax
+pc5:
+mov ebx, [ebp + 12d]
+mov eax, [ebx - 4]
+mov [ebp - 16], eax
+pc6:
+mov eax, [ebp - 16]
+sub eax, [ebp - 4d]
+mov [ebp - 16], eax
+pc7:
+mov eax, [ebp - 16]
+mov ebx, [ebp + 16d]
+mov [ebx - 4], eax
+pc8:
+invoke crt_printf, addr strFmt, offset str0
+pc9:
+mov ebx, [ebp + 12d]
+mov eax, [ebx - 4]
+invoke crt_printf, addr intFmt, eax
+pc10:
+invoke crt_printf, addr strFmt, offset str1
+pc11:
+mov eax, [ebp - 4d]
+invoke crt_printf, addr intFmt, eax
+pc12:
+mov esp, ebp
+pop ebp
+ret
+proce_2 ENDP
+proce_1 PROC
+push ebp
+mov ebp, esp
+sub esp, 4d
+pc13:
+push [ebp + 12]
+pc14:
+push ebp
+pc15:
+sub esp, 4
+pc16:
+call proce_2
+pc17:
+mov esp, ebp
+pop ebp
+ret
+proce_1 ENDP
+start:
+push ebp
+mov ebp, esp
+sub esp, 92d
+pc25:
+push 10d
+pc26:
+push ebp
+pc27:
+sub esp, 4
+pc28:
+call proce_3
+pc29:
+pop eax
+pop eax
+mov [ebp - 88], eax
+pc30:
+mov eax, [ebp - 88]
+mov [ebp - 92], eax
+pc31:
+mov eax, [ebp - 92]
+mov [ebp - 4d], eax
+pc32:
+invoke crt_printf, addr strFmt, offset str2
+pc33:
+mov eax, [ebp - 4d]
+invoke crt_printf, addr intFmt, eax
+pc34:
+push ebp
+pc35:
+sub esp, 4
+pc36:
+call proce_1
+pc37:
+invoke crt_printf, addr strFmt, offset str3
+pc38:
+mov eax, [ebp - 4d]
+invoke crt_printf, addr intFmt, eax
+pc39:
+mov esp, ebp
+pop ebp
+ret
+end start

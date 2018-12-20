@@ -1,0 +1,71 @@
+const OP1='a',OP2='b',ASCIIZERO=+48,ERRORCODE=-1;
+ var d1,d2,r1,r2,rop,ascii,i:integer;
+     a:array[100] of integer;
+     op:char;
+     string:array[2]of char;
+ 
+ procedure sort(var para1,para2:integer); 
+    var i,j,max,temp:integer;
+    procedure sortPrint;
+       begin                  
+         write("after swap")
+       end;
+    begin
+       if para1>=para2 then
+           begin
+             temp:=para1;                  
+             para1:=para2;
+             para2:=temp ;
+             sortPrint      
+           end  
+       else 
+    end
+     ;
+ 
+ function timesByR(para3:integer):integer;
+    begin
+      if para3>1 then                     
+        timesByR:=para3*timesByR(para3-1)
+      else
+        timesByR:=para3
+    end
+     ;
+
+ function timesByFor(para4:integer):integer;
+    var k,l:integer;
+    begin                                
+      l:=1; 
+      for k:=1 to para4 do
+         l:=l*k
+        ;
+      timesByFor:=l
+    end
+     ;
+
+ begin 
+    read(i);
+    a[i]:=330;
+    write(a[i]);                                 
+    d1:=4;
+    d2:=3;
+    op:=97;
+    string[0]:=48; 
+    ascii:=string[0]+ASCIIZERO;
+    sort(d1,d2);
+    r1:=timesByR(d1)*1;
+    r2:=timesByFor(d1)*1;
+    if r1<>r2 then
+       write("error\n",ERRORCODE)
+    else 
+       write("correct",r1)
+     ;
+    case op of
+      'a':rop:=d1+d2;
+      'b':rop:=d1-d2
+    end
+      ;
+     write(ascii);
+     write(rop);
+     write("end of main")
+ end
+.

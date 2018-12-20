@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="Compiler" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/Compiler" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/Compiler" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-fexceptions" />
+		</Compiler>
+		<Unit filename="DAGAnalysis.cpp" />
+		<Unit filename="DAGAnalysis.h" />
+		<Unit filename="DataFlowAnalysis.cpp" />
+		<Unit filename="DataFlowAnalysis.h" />
+		<Unit filename="Error.cpp" />
+		<Unit filename="Error.h" />
+		<Unit filename="FinalcodeProducer.cpp" />
+		<Unit filename="FinalcodeProducer.h" />
+		<Unit filename="FinalcodeProducerOP.cpp" />
+		<Unit filename="FinalcodeProducerOP.h" />
+		<Unit filename="LexiconAnalysis.cpp" />
+		<Unit filename="LexiconAnalysis.h" />
+		<Unit filename="MidcodeProduecer.cpp" />
+		<Unit filename="MidcodeProduecer.h" />
+		<Unit filename="Optimize.cpp" />
+		<Unit filename="Optimize.h" />
+		<Unit filename="SymbolTableManage.cpp" />
+		<Unit filename="SymbolTableManage.h" />
+		<Unit filename="SyntaxAnalysis.cpp" />
+		<Unit filename="SyntaxAnalysis.h" />
+		<Unit filename="main.cpp" />
+		<Unit filename="main.h" />
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

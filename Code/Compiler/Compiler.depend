@@ -1,0 +1,132 @@
+# depslib dependency file v1.0
+1452308071 source:c:\users\lang_\desktop\compiler\error.cpp
+	"Error.h"
+
+1452308633 c:\users\lang_\desktop\compiler\error.h
+	<iostream>
+	<fstream>
+	<string.h>
+	<stdlib.h>
+	"LexiconAnalysis.h"
+
+1452309509 source:c:\users\lang_\desktop\compiler\lexiconanalysis.cpp
+	"LexiconAnalysis.h"
+
+1452309628 c:\users\lang_\desktop\compiler\lexiconanalysis.h
+	<iostream>
+	<fstream>
+	<string.h>
+	<stdlib.h>
+	"Error.h"
+
+1452300673 source:c:\users\lang_\desktop\compiler\main.cpp
+	"main.h"
+
+1452300415 c:\users\lang_\desktop\compiler\main.h
+	<iostream>
+	<fstream>
+	<string.h>
+	<stdlib.h>
+	"LexiconAnalysis.h"
+	"Error.h"
+	"SyntaxAnalysis.h"
+	"SymbolTableManage.h"
+	"MidcodeProduecer.h"
+	"FinalcodeProducer.h"
+	"Optimize.h"
+	"DAGAnalysis.h"
+	"DataFlowAnalysis.h"
+	"FinalcodeProducerOP.h"
+
+1451651914 c:\users\lang_\desktop\compiler\syntaxanalysis.h
+	<iostream>
+	<fstream>
+	<string.h>
+	<stdlib.h>
+	"LexiconAnalysis.h"
+	"SymbolTableManage.h"
+	"Error.h"
+	"MidcodeProduecer.h"
+
+1452260312 c:\users\lang_\desktop\compiler\symboltablemanage.h
+	<iostream>
+	<fstream>
+	<string.h>
+	<stdlib.h>
+	"Error.h"
+	"MidcodeProduecer.h"
+
+1452166362 source:c:\users\lang_\desktop\compiler\symboltablemanage.cpp
+	"SymbolTableManage.h"
+
+1452308336 source:c:\users\lang_\desktop\compiler\syntaxanalysis.cpp
+	"SyntaxAnalysis.h"
+
+1452257792 c:\users\lang_\desktop\compiler\midcodeproduecer.h
+	<iostream>
+	<fstream>
+	<string.h>
+	<stdlib.h>
+
+1451656190 source:c:\users\lang_\desktop\compiler\midcodeproduecer.cpp
+	"MidcodeProduecer.h"
+
+1452279424 source:c:\users\lang_\desktop\compiler\finalcodeproducer.cpp
+	"FinalcodeProducer.h"
+
+1449193086 c:\users\lang_\desktop\compiler\finalcodeproducer.h
+	<iostream>
+	<fstream>
+	<string.h>
+	<stdlib.h>
+	"MidcodeProduecer.h"
+	"SymbolTableManage.h"
+
+1452237785 source:c:\users\lang_\desktop\compiler\optimize.cpp
+	"Optimize.h"
+
+1451730877 c:\users\lang_\desktop\compiler\optimize.h
+	<iostream>
+	<fstream>
+	<string.h>
+	<stdlib.h>
+	"MidcodeProduecer.h"
+	"SymbolTableManage.h"
+	"DAGAnalysis.h"
+	"DataFlowAnalysis.h"
+
+1451736231 c:\users\lang_\desktop\compiler\daganalysis.h
+	<iostream>
+	<fstream>
+	<string.h>
+	<stdlib.h>
+	"MidcodeProduecer.h"
+	"SymbolTableManage.h"
+
+1451736283 c:\users\lang_\desktop\compiler\dataflowanalysis.h
+	<iostream>
+	<fstream>
+	<string.h>
+	<stdlib.h>
+	"MidcodeProduecer.h"
+	"SymbolTableManage.h"
+	"DAGAnalysis.h"
+
+1452237049 source:c:\users\lang_\desktop\compiler\dataflowanalysis.cpp
+	"DataFlowAnalysis.h"
+
+1452236446 source:c:\users\lang_\desktop\compiler\daganalysis.cpp
+	"DAGAnalysis.h"
+
+1452237279 c:\users\lang_\desktop\compiler\finalcodeproducerop.h
+	<iostream>
+	<fstream>
+	<string.h>
+	<stdlib.h>
+	<sstream>
+	"MidcodeProduecer.h"
+	"SymbolTableManage.h"
+
+1452237248 source:c:\users\lang_\desktop\compiler\finalcodeproducerop.cpp
+	"FinalcodeProducerOP.h"
+
